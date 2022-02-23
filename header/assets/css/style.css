@@ -5,11 +5,11 @@
 
 header {
     text-align: center;
-    height: 61px;
+    height: 156px;
 }
 
 header>.main-nav {
-    background: url("/public/bg-main-menu.png") repeat-x center top;
+    background: url("/public/images/bg-header.png") repeat-x center top;
 }
 
 .main-nav>.container {
@@ -25,7 +25,7 @@ header>.main-nav {
 
 .main-menu>li {
     display: inline-block;
-    /* float: left; */
+    /* //float: left; */
     padding: 15px;
     position: relative;
 }
@@ -40,15 +40,16 @@ header>.main-nav {
     line-height: 31px;
 }
 
-.logo {
-    height: 80px;
-    width: 150px;
+.logo>a {
+    height: 108px;
+    width: 160px;
     position: absolute;
-    background: url("/public/logo.png") no-repeat center top;
+    background: url("/public/images/logo.png") no-repeat center top;
 }
 
 .sub-menu {
     position: absolute;
+    top: 61px;
 }
 
 .none {
