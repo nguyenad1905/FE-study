@@ -1,0 +1,28 @@
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+}
+
+.banner-slide {
+    width: 630px;
+}
+
+.slick-dots li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 8px;
+}
+
+.slick-dots li button {
+    border-radius: 50%;
+    font-size: 0;
+    height: 12px;
+    width: 12px;
+    border: none;
+    background: #cccc;
+}
+
+.slick-active button {
+    background: yellow !important;
+}
