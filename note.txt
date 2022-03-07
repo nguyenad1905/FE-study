@@ -1,0 +1,33 @@
+scale màn hình
+__________________________________________________________________________
+function scale() {
+    var maxWidth = $('body').width();
+    var maxHeight = $('body').height();
+    if (maxWidth > 1920) {
+        $('#body').width('100%');
+        $('#body').height('100%');
+    } else {
+        $('#body').width('1920');
+        $('#body').height('980');
+    }
+    $('#body').css('transform', 'scale(' + (maxWidth / 1920) + ')');
+}
+__________________________________________________________________________
+scale();
+    $(window).on('resize', function() {
+        scale();
+    });
+__________________________________________________________________________
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#body , .menu-left {
+    transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
