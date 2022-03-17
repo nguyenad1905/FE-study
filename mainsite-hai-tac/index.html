@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="./static/css/liteaccordion.css" rel="stylesheet" />
+    <script src="./static/js/jquery.easing.1.3.js"></script>
+    <script src="./static/js/liteaccordion.jquery.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="logo"><img src="./static/images/logo-vua-hai-tac.png" alt="Game Hải Tặc"></h1>
+            <ul id="main-menu" class="nav-bar main-menu">
+                <li class="nav-active">
+                    <a href="#">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#">Sự kiện</a>
+                </li>
+                <li>
+                    <a href="#">Diễn đàn</a>
+                </li>
+                <li>
+                    <a href="#">Fanpage</a>
+                </li>
+                <li class="code-bank">
+                    <a href="#">Ngân hàng code</a>
+                </li>
+                <li class="download-client">
+                    <a href="#">Tải client</a>
+                </li>
+            </ul>
+            <div class="mobile-menu" style="display: none;">
+                <a class="playgame" href="http://568play.vn/games/hai-tac"></a>
+                <a id="open-left-menu" href="javascript:void(0);">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="zone left-zone">
+            <div class="group-play-now">
+                <a href="#" class="btn-download">
+                    <img class="inside-btn" src="./static/images/xoay-trai.png" id="rotation-left">
+                    <img class="inside-btn" src="./static/images/xoay-phai.png" id="rotation-right">
+                    <img class="inside-btn" src="./static/images/tai-ngay.png" id="text-tai-ngay">
+                </a>
+                <div class="group-form-support">
+                    <a href="#" class="support-download btn-hover"></a>
+                    <a href="#" class="btn-group-support btn-hover sign-up">Đăng ký</a>
+                    <a href="#" class="btn-group-support btn-hover up-to-card">Nạp thẻ</a>
+                    <form action="" method="post" class="group-login">
+                        <div class="group-input">
+                            <input type="text" class="username" placeholder="Tài Khoản">
+                            <input type="text" class="password" placeholder="Mật Khẩu">
+                        </div>
+                        <a href="javascript:void(0);" class="btn-hover btn-play-now" type="submit"></a>
+                        <a href="#" class="forget-password">Quên mật khẩu ?</a>
+                    </form>
+                </div>
+            </div>
+            <div class="group-server-list">
+                <div class="server-568e-container">
+                    <label>Chọn nhanh máy chủ 568E</label>
+                    <select id="server-568e">
+                            <option value="0" selected disabled hidden>Vui lòng chọn</option>
+                            <option value="1">test1</option>
+                            <option value="2">test2</option>
+                            <option value="3">test3</option>
+                            <option value="4">test4</option>
+                            <option value="1">test1</option>
+                            <option value="2">test2</option>
+                            <option value="3">test3</option>
+                            <option value="4">test4</option>
+                            <option value="1">test1</option>
+                            <option value="2">test2</option>
+                            <option value="3">test3</option>
+                            <option value="4">test4</option>
+                    </select>
+                </div>
+                <div class="server-zing-container">
+                    <label>Chọn nhanh máy chủ Zing</label>
+                    <select id="server-zing">
+                        <option value="0" selected disabled hidden>Vui lòng chọn</option>
+                        <option value="1">test1</option>
+                        <option value="2">test2</option>
+                        <option value="3">test3</option>
+                        <option value="4">test4</option>
+                        <option value="1">test1</option>
+                        <option value="2">test2</option>
+                        <option value="3">test3</option>
+                        <option value="4">test4</option>
+                        <option value="1">test1</option>
+                        <option value="2">test2</option>
+                        <option value="3">test3</option>
+                        <option value="4">test4</option>
+                </select>
+                </div>
+
+                <h2 class="server-list">DANH SÁCH MÁY CHỦ</h2>
+                <ul class="block-server">
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                    <li>
+                        <a href="#">S372.Inu Inu</a>
+                    </li>
+                </ul>
+                <div class="pagination">
+                    <a href="javascript:void(0);" id="prev"><i class="fa-solid fa-chevron-left"></i></a>
+                    <a href="javascript:void(0);" id="next"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0" nonce="ly9EtwcM"></script>
+            <div class="fb-page" data-href="https://www.facebook.com/haitac.568play.vn/" data-tabs="" data-width="300" data-height="132" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/haitac.568play.vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/haitac.568play.vn/">Vua Hải Tặc</a></blockquote>
+            </div>
+        </div>
+        <div class="zone right-zone ">
+            <ul class="quicklink1" style="display: none;">
+                <li>
+                    <a class="btn-download-game" href="//st-haitac.568play.vn/dl-client/c21f969b5f03d33d43e04f8f136e7682/VuaHaiTac.apk" target="_blank" class="download-game link-download-apk" id="download-ios"></a>
+                </li>
+                <li>
+                    <a class="up-card" href="https://id.568play.vn/" target="_blank" class="codebank"></a>
+                </li>
+                <li>
+                    <a class="code-newbie" href="https://nganhangcode.568play.vn/hai-tac" target="_blank" class="button-get-giftcode"></a>
+                </li>
+            </ul>
+            <div id="main-banner">
+                <div class="image-item">
+                    <a href="#"> <img style="width: 100%;" src="./static/images/banner-img1.jpg"></a>
+                </div>
+                <div class="image-item">
+                    <a href="#"> <img style="width: 100%;" src="./static/images/banner-img1.jpg"></a>
+                </div>
+                <div class="image-item">
+                    <a href="#"> <img style="width: 100%;" src="./static/images/banner-img1.jpg"></a>
+                </div>
+                <div class="image-item">
+                    <a href="#"> <img style="width: 100%;" src="./static/images/banner-img1.jpg"></a>
+                </div>
+            </div>
+            <article class="mid-content content-between news">
+                <ul class="header-news">
+                    <li><a id="news" class="header-news-active" href="#">Tin tức</a></li>
+                    <li><a id="event" href="#">Sự kiện</a></li>
+                    <li><a id="update" href="#">Update</a></li>
+                    <!-- <li class="group-search">
+                        <form class="search-title" method="get">
+                            <input type="text" id="search" placeholder="Tìm kiếm">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                        <a href="#" class="more-news">+</a>
+                    </li> -->
+                    <a href="#" class="more-news">+</a>
+
+                </ul>
+                <ul id="content-news" class="main-content content-news">
+                    <li class="content top-content">
+                        <h3 class="title-content"><a href=""><span class="time">[16/08]</span> Nội dung cập nhật Mới 16.08.2017</a></h3>
+                        <div class="content-detail">
+                            <a href="#" class="sub-news"><img class="sub-content-image" src="./static/images/280x180(237).jpg"></a>
+                            <p>Cùng VHT tham gia ngay các hoạt động tuần để nhận được các phần quà hấp dẫn nhé các thuyền trưởng!</p>
+                        </div>
+                    </li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>Hoạt động đợt 3 tháng 8</a></li>
+                </ul>
+                <ul id="content-event" class="main-content content-event" style="display: none;">
+                    <li class="content top-content">
+                        <h3 class="title-content"><a href=""><span class="time">[16/08]</span>2 Nội dung cập nhật Mới 16.08.2017</a></h3>
+                        <div class="content-detail">
+                            <a href="#" class="sub-news"><img class="sub-content-image" src="./static/images/280x180(237).jpg"></a>
+                            <p>2Cùng VHT tham gia ngay các hoạt động tuần để nhận được các phần quà hấp dẫn nhé các thuyền trưởng!</p>
+                        </div>
+                    </li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>2Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>2Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>2Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>2Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>2Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>2Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>2Hoạt động đợt 3 tháng 8</a></li>
+                </ul>
+                <ul id="content-update" class="main-content content-update" style="display: none;">
+                    <li class="content top-content">
+                        <h3 class="title-content"><a href=""><span class="time">[16/08]</span>3 Nội dung cập nhật Mới 16.08.2017</a></h3>
+                        <div class="content-detail">
+                            <a href="#" class="sub-news"><img class="sub-content-image" src="./static/images/280x180(237).jpg"></a>
+                            <p>3Cùng VHT tham gia ngay các hoạt động tuần để nhận được các phần quà hấp dẫn nhé các thuyền trưởng!</p>
+                        </div>
+                    </li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>3Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>3Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>3Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>3Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>3Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>3Hoạt động đợt 3 tháng 8</a></li>
+                    <li><a href="#" class="normal-content"><span class="time">[16/08]</span>3Hoạt động đợt 3 tháng 8</a></li>
+                </ul>
+            </article>
+            <div class="mid-content ranking">
+                <form class="choose-server">
+                    <select name="serverId" id="serverId" size="1">
+                        <option value="S1">S1 - Luffy</option>
+                        <option value="S1">S1 - Luffy</option>
+                        <option value="S1">S1 - Luffy</option>
+                        <option value="S1">S1 - Luffy</option>
+                        <option value="S1">S1 - Luffy</option>
+                    </select>
+                </form>
+                <ul class="tabs">
+                    <li class="level active"><a href="javascript:void(0);" onclick="onWantedBoard('level');">Level</a></li>
+                    <li class="fame"><a href="javascript:void(0);" onclick="onWantedBoard('fame');">Danh vọng</a></li>
+                    <li class="arena"><a href="javascript:void(0);" onclick="onWantedBoard('arena');">Đấu trường</a></li>
+                </ul>
+                <div id="level" class="rank">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">Vị trí</div>
+                            <div class="cell">Tên nhân vật</div>
+                            <div class="cell">Cấp độ</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fame" class="rank" style="display: none;">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">Vị trí</div>
+                            <div class="cell">Tên nhân vật</div>
+                            <div class="cell">Cấp độ</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="arena" class="rank" style="display: none;">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">Vị trí</div>
+                            <div class="cell">Tên nhân vật</div>
+                            <div class="cell">Cấp độ</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">Coll 1</div>
+                            <div class="cell">Coll 2</div>
+                            <div class="cell">Coll 3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="group-support">
+                <li>
+                    <a href="#" class="btn btn-support btn-hover"></a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-gift-code btn-hover"></a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-faq btn-hover"></a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-tip btn-hover"></a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-trailer btn-hover"></a>
+                </li>
+            </ul>
+            <div id="class-list">
+                <ol>
+                    <li class="loli">
+                        <h4></h4>
+                        <div>
+                            <figure>
+                                <!-- content here -->
+                            </figure>
+                        </div>
+                    </li>
+                    <li class="roya">
+                        <h4></h4>
+                        <div>
+                            <figure>
+                                <!-- content here -->
+                            </figure>
+                        </div>
+                    </li>
+                    <li class="saab">
+                        <h4></h4>
+                        <div>
+                            <figure>
+                                <!-- content here -->
+                            </figure>
+                        </div>
+                    </li>
+                    <li class="junor">
+                        <h4></h4>
+                        <div>
+                            <figure>
+                                <!-- content here -->
+                            </figure>
+                        </div>
+                    </li>
+                    <li class="coolguy">
+                        <h4></h4>
+                        <div>
+                            <figure>
+                                <!-- content here -->
+                            </figure>
+                        </div>
+                    </li>
+                    <li class="anni">
+                        <h4></h4>
+                        <div>
+                            <figure>
+                                <!-- content here -->
+                            </figure>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <!-- <ul class="list-class">
+                <li class="loli">
+                    <a href="javascript:void(0);" class="name">Triệu hồi sư Loli</a>
+                    <div class="info" style="width: 238px;">
+                        <p class="title">Triệu hồi sư Loli</p>
+                        <div class="skill">
+                            <div class="group-item">
+                                <span>Tuyệt chiêu</span>
+                                <span>Biến chú gấu to lớn đè bẹp đối thủ</span>
+                            </div>
+                        </div>
+                        <div class="weapon">
+                            <div class="group-item">
+                                <span>Vũ khí</span>
+                                <span>Gấu Bông</span>
+                            </div>
+                        </div>
+                        <div class="ability">
+                            <div class="group-item">
+                                <span>Kĩ băng</span>
+                                <span>Gấu Tát</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="roya">
+                    <a href="javascript:void(0);" class="name ">Kiếm sĩ Roya</a>
+                    <div class="info" style="width: 0; display: block; overflow: hidden;">
+                        <p class="title">Kiếm sĩ Roya</p>
+                        <div class="skill">
+                            <div class="group-item">
+                                <span>Tuyệt chiêu</span>
+                                <span>Điệu múa kiếm huyền ảo</span>
+                            </div>
+
+                        </div>
+                        <div class="weapon">
+                            <div class="group-item">
+                                <span>Vũ khí</span>
+                                <span>Kiếm</span>
+                            </div>
+
+                        </div>
+                        <div class="ability">
+                            <div class="group-item">
+                                <span>Kĩ băng</span>
+                                <span>Chớp kiếm</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="saab">
+                    <a href="javascript:void(0);" class="name ">Nhạc công Saab</a>
+                    <div class="info" style="width: 0; display: block; overflow: hidden;">
+                        <p class="title">Nhạc công Saab</p>
+                        <div class="skill">
+                            <div class="group-item">
+                                <span>Tuyệt chiêu</span>
+                                <span>Thần sấm phá</span>
+                            </div>
+                        </div>
+                        <div class="weapon">
+                            <div class="group-item">
+                                <span>Vũ khí</span>
+                                <span>Dao găm</span>
+                            </div>
+                        </div>
+                        <div class="ability">
+                            <div class="group-item">
+                                <span>Kĩ băng</span>
+                                <span>Chim sấm </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="junor">
+                    <a href="javascript:void(0);" class="name ">Chiến sĩ Junor</a>
+                    <div class="info" style="width: 0; display: block; overflow: hidden;">
+                        <p class="title">Chiến sĩ Junor</p>
+                        <div class="skill">
+                            <div class="group-item">
+                                <span>Tuyệt chiêu</span>
+                                <span>Xưng bá trời đất</span>
+                            </div>
+                        </div>
+                        <div class="weapon">
+                            <div class="group-item">
+                                <span>Vũ khí</span>
+                                <span>Đao</span>
+                            </div>
+                        </div>
+                        <div class="ability">
+                            <div class="group-item">
+                                <span>Kĩ băng</span>
+                                <span>Xưng bá trời đất</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="coolguy">
+                    <a href="javascript:void(0);" class="name ">Xạ thủ Coolguy</a>
+                    <div class="info" style="width: 0; display: block; overflow: hidden;">
+                        <p class="title">Xạ thủ Coolguy</p>
+                        <div class="skill">
+                            <div class="group-item">
+                                <span>Tuyệt chiêu</span>
+                                <span>Mắt bồ câu đánh lén</span>
+                            </div>
+                        </div>
+                        <div class="weapon">
+                            <div class="group-item">
+                                <span>Vũ khí</span>
+                                <span>Súng</span>
+                            </div>
+                        </div>
+                        <div class="ability">
+                            <div class="group-item">
+                                <span>Kĩ băng</span>
+                                <span>Pháo kích</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="anni">
+                    <a href="javascript:void(0);" class="name">Hoa tiêu Anni</a>
+                    <div class="info" style="width: 0; display: block; overflow: hidden;">
+                        <p class="title">Hoa Tiêu Anni</p>
+                        <div class="skill">
+                            <div class="group-item">
+                                <span>Tuyệt chiêu</span>
+                                <span>Phượng hoàng bộc phá</span>
+                            </div>
+                        </div>
+                        <div class="weapon">
+                            <div class="group-item">
+                                <span>Vũ khí</span>
+                                <span>Cung tên</span>
+                            </div>
+                        </div>
+                        <div class="ability">
+                            <div class="group-item">
+                                <span>Kĩ băng</span>
+                                <span>Đả kích chân tình</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul> -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <a href="http://568play.vn/ho-tro " class="support-member"></a>
+            <span>© Copyright by haitac.568play.vn. All Rights Reserved.</span>
+        </div>
+        <div class="component-fbmessenger">
+            <a href="javascript:void(0);" class="chat_fb">Bạn cần hỗ trợ</a>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0" nonce="zsN3sj8Q"></script>
+            <div class="fb-page" data-href="https://www.facebook.com/haitac.568play.vn/" data-tabs="messages" data-width="250" data-height="300" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/haitac.568play.vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/haitac.568play.vn/">Vua Hải Tặc</a></blockquote>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./static/js/main.js"></script>
+</body>
+
+</html>
